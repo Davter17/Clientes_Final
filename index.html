@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="cargar_productos_index()">
+	<h1>Listado de productos</h1>
+	<p>Productos en la cesta: <span id="n_articulos">0</span></p>
+	<button onclick="location.href='carrito.html'">Ver carrito de la compra</button>
+	<p>Buscador</p>
+	<section id="buscador">
+		<label for="nombre">Producto a buscar: </label>
+        <input type="text" id="nombre" name="nombre" oninput="cargar_productos_index()">
+        <button id="buscar">Buscar</button>
+	</section>
+    <main id="articulos">
+    </main>
+    <script src="funciones.js"></script>
+</body>
+</html>
