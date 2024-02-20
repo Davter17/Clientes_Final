@@ -147,6 +147,11 @@ article .colores{
     border-radius:50%;
 }
 
+.gif{
+    width: 100px;
+    margin-top: 150px;
+}
+
 
 @media only screen and (max-width: 600px) {
     main{

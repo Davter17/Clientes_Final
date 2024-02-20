@@ -1,2 +1,0 @@
-<?php
-ECHO "Ah";
