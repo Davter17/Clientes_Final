@@ -5,31 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link rel="stylesheet" href="css/style.css">
-	<link href="jquery-ui-1.13.2.custom/jquery-ui.css" rel="stylesheet">
+    <link href="jquery-ui-1.13.2.custom/jquery-ui.css" rel="stylesheet">
 
     <!-- Incluye jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Incluye jQuery UI -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     
-    <!--Recordenar los articulos (Raquel)-->
-    <script> jQuery(document).ready(function () { jQuery("main").sortable(); });  </script>
+    <style>
+        /* Estilos para elementos de jQuery UI */
+        .ui-button {
+            margin: 5px;
+        }
 
+        .ui-input-text {
+            width: 200px; /* Puedes ajustar el ancho según sea necesario */
+            padding: 5px;
+        }
+    </style>
+    
 </head>
 <body>
-	<h1>Listado de productos</h1>
-	<p>Productos en la cesta: <span id="n_articulos">0</span></p>
-	<button onclick="location.href='carrito.html'">Ver carrito de la compra</button>
-	<p>Buscador</p>
-	<section id="buscador">
-		<label for="nombre">Producto a buscar: </label>
-        <input type="text" id="nombre" name="nombre">
-        <button id="buscar">Buscar</button>
-	</section>
-    <main id="articulos">
+    <h1>Listado de productos</h1>
+    <p>Productos en la cesta: <span id="n_articulos">0</span></p>
+    <button id="verCarrito">Ver carrito de la compra</button>
+    <p>Buscador</p>
+    <section id="buscador">
+        <label for="nombre">Producto a buscar: </label>
+        <input type="text" id="nombre" name="nombre" class="ui-input-text">
+        <button id="buscar" class="ui-button ui-widget ui-corner-all">Buscar</button>
+    </section>
+    <main id="articulos" class="sortable"> <!-- Aplicamos la clase sortable -->
     </main>
+    
     <script src="funciones.js"></script>
     <script src="jquery-ui-1.13.2.custom/external/jquery/jquery.js"></script>
     <script src="jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#articulos").sortable(); 
+            // Aplicamos estilos de jQuery UI a los botones
+            $("#verCarrito").button();
+            $("#buscar").button();
+        });
+    </script>
 </body>
 </html>

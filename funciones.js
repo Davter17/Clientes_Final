@@ -78,6 +78,7 @@ function cargar_productos(){
                     //Manejo del articulo principal
                     article = document.createElement("article");
                     article.id = "articulo" + (i+1);
+                    article.classList.add("ui-widget");
                     main.appendChild(article); 
     
                     //Manejo de la imagen
@@ -107,6 +108,7 @@ function cargar_productos(){
                     select = document.createElement("select");
                     select.name = "color" + (i+1);
                     select.id = "color" + (i+1);
+                    select.classList.add("ui-widget", "ui-selectmenu-button")
     
                     for (let j = 0; j< response[i].colores.length; j++){
                         option = document.createElement("option");
@@ -151,6 +153,7 @@ function cargar_productos(){
                         cesta(response[i].modelo);
                     });
                     button.innerHTML = "Añadir a la cesta";
+                    button.classList.add("ui-button", "ui-widget", "ui-corner-all");
                     div2.appendChild(button);
     
                 }
