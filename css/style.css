@@ -163,4 +163,29 @@ article .colores{
         flex-basis: 100%;
       }
   }
-  
+
+
+/* Estilos para elementos de jQuery UI */
+.ui-button {
+    margin: 5px;
+}
+
+.ui-input-text {
+    width: 200px;
+    padding: 5px;
+}
+
+.producto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.producto:hover {
+    cursor: pointer;
+}
+
+.producto.selected {
+    background-color: lightblue;
+}

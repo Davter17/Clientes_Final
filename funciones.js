@@ -147,15 +147,18 @@ function cargar_productos(){
                     div5.innerHTML = "€ " + response[i].precio;
                     div2.appendChild(div5);  
     
-                    //Manejo del botón
+                    // Manejo del botón
                     button = document.createElement("button");
-                    button.addEventListener("click", function(){
-                        cesta(response[i].modelo);
-                    });
                     button.innerHTML = "Añadir a la cesta";
-                    button.classList.add("ui-button", "ui-widget", "ui-corner-all");
+                    button.classList.add("ui-button", "ui-widget", "ui-corner-all", "producto"); 
                     div2.appendChild(button);
-    
+
+                    // Efecto al añadir al carrito
+                    $(button).click(function() {
+                        cesta(response[i].modelo)
+                        var nArticulos = parseInt($("#n_articulos").text());
+                        $("#n_articulos").text(nArticulos + 1);
+                    });
                 }
             } else{
                 //No hay productos
